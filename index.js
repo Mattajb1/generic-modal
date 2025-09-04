@@ -101,8 +101,16 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-//Close button: Close modal
+// Close button: Close modal
 const closeButton = document.querySelector('#close-button');
 closeButton.addEventListener('click', function () {
     document.querySelectorAll('.overlay-element').forEach(overlay => overlay.remove());
+});
+
+// Background: Close modal
+const background = document.querySelector('#background');
+background.addEventListener('click', function (event) {
+		if (event.target === background ) {
+			document.querySelectorAll('.overlay-element').forEach(overlay => overlay.remove());
+		}
 });
